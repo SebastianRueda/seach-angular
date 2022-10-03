@@ -12,6 +12,9 @@ import { InstrumentsComponent } from './instruments/instruments.component';
     InstrumentListComponent,
     InstrumentsComponent
   ],
+  exports: [
+    InstrumentsComponent
+  ],
   imports: [
     CommonModule
   ]
