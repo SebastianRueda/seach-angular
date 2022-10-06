@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Instrument} from "../interfaces/Instrument";
-import {InstrumentUseCase} from "../../usecase/instrument-use-case";
 
 @Component({
   selector: 'app-instruments',
@@ -9,7 +8,6 @@ import {InstrumentUseCase} from "../../usecase/instrument-use-case";
 })
 export class InstrumentsComponent {
 
-  constructor(private instrumentUseCase: InstrumentUseCase) { }
-
-  instruments: Instrument[] = this.instrumentUseCase.getInstruments()
+  @Input()
+  instruments: Instrument[] = []
 }

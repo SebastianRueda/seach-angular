@@ -1,2 +1,6 @@
-<app-header></app-header>
-<app-instruments></app-instruments>
+<app-header
+  (onSearch)="updateInstrumentsList($event)"
+></app-header>
+<app-instruments
+  [instruments]="instrumentsList"
+></app-instruments>
