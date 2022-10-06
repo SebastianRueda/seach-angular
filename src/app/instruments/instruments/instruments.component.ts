@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Instrument} from "../interfaces/Instrument";
+import {InstrumentUseCase} from "../../usecase/instrument-use-case";
 
 @Component({
   selector: 'app-instruments',
@@ -7,24 +8,8 @@ import {Instrument} from "../interfaces/Instrument";
   styleUrls: ['./instruments.component.css']
 })
 export class InstrumentsComponent {
-  instruments: Instrument[] = [
-    {
-      type: "1-type",
-      brand: "1-brand",
-      description: "1-description",
-      image: "1-image"
-    },
-    {
-      type: "2-type",
-      brand: "2-brand",
-      description: "2-description",
-      image: "2-image"
-    },
-    {
-      type: "3-type",
-      brand: "3-brand",
-      description: "3-description",
-      image: "3-image"
-    }
-  ]
+
+  constructor(private instrumentUseCase: InstrumentUseCase) { }
+
+  instruments: Instrument[] = this.instrumentUseCase.getInstruments()
 }
