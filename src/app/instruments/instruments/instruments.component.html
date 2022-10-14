@@ -1,1 +1,3 @@
-<app-instrument-list [instruments]="instruments"></app-instrument-list>
+<ul *ngFor="let instrument of instruments">
+  <app-instrument [instrument]="instrument"></app-instrument>
+</ul>

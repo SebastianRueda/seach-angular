@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {InstrumentUseCase} from "../../usecase/instrument-use-case";
 import {Instrument} from "../../instruments/interfaces/Instrument";
 
@@ -13,6 +13,9 @@ export class HomeComponent {
 
   title = 'taller-2-tp-grupo-3';
   instrumentsList: Instrument[] = this.instrumentsUseCase.getInstruments()
+
+  @Output()
+  onAddToCart: EventEmitter<Instrument> = new EventEmitter<Instrument>()
 
   updateInstrumentsList(search: string) {
     this.instrumentsList = this.instrumentsUseCase.searchInstruments(search)

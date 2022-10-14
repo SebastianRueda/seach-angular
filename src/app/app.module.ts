@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import {InstrumentsModule} from "./instruments/instruments.module";
 import {FormsModule} from "@angular/forms";
 import {HomeModule} from "./home/home/home.module";
-import {HeaderModule} from "./header/header/header.module";
+import {HeaderModule} from "./header/header.module";
 
 @NgModule({
   declarations: [
