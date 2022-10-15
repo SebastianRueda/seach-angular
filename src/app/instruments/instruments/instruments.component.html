@@ -1,3 +1,13 @@
-<ul class="w3-row-padding" *ngFor="let instrument of instruments">
-  <app-instrument [instrument]="instrument"></app-instrument>
-</ul>
+<div
+  class="w3-row-padding"
+  style="display: flex; flex-wrap: wrap;">
+
+  <app-instrument
+    style="flex: 1 0 5%;
+    box-sizing: border-box;
+    margin: 1rem .25em;"
+    *ngFor="let instrument of instruments"
+    [instrument]="instrument"
+  >
+  </app-instrument>
+</div>
