@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from "./home.component";
 import {InstrumentsModule} from "../../instruments/instruments.module";
 import {HeaderModule} from "../../header/header.module";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -11,7 +12,8 @@ import {HeaderModule} from "../../header/header.module";
   imports: [
     CommonModule,
     HeaderModule,
-    InstrumentsModule
+    InstrumentsModule,
+    HttpClientModule
   ],
   exports: [
     HomeComponent
